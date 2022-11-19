@@ -1,0 +1,11 @@
+@mixin flex_box($type, $justify, $align) {
+    display: flex;
+    flex-direction: $type;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.fondo_transparente{
+        background-image: linear-gradient(rgba(126, 7, 7, 0.192), rgb(160, 141, 141));
+        background-attachment: local;
+}

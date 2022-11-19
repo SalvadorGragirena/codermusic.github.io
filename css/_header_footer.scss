@@ -1,0 +1,44 @@
+.header_bootstrap{
+    background-image: linear-gradient(to right, rgb(155, 2, 104), rgb(15, 55, 233));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    ul{
+        display: flex;
+        justify-content: space-around;
+        li{
+            list-style-type: none;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: rgb(237, 213, 213);
+            font-size: 20px;
+
+            &:hover {
+                color: rgb(66, 11, 11);
+                transition: 0.2s;
+                border-bottom: solid 1px rgb(237, 213, 213);
+            }
+        }
+    }
+}
+
+.footer_bootstrap{
+    background-color: rgb(39, 53, 53);
+
+    h2 {
+        color: rgb(215, 200, 182);
+        text-align: center;
+        margin: 20px;
+    }
+
+    p {
+        color: rgb(215, 200, 182);
+        text-align: center;
+    }
+
+}

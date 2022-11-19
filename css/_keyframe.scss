@@ -1,0 +1,21 @@
+@keyframes slidein {
+    from {
+        margin-left: 5%;
+        width: 95%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 95%;
+    }
+}
+
+@keyframes alter_colors {
+    from {
+        color: rgb(228, 224, 225);
+    }
+
+    to {
+        color: rgb(164, 164, 30);
+    }
+}

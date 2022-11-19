@@ -1,0 +1,595 @@
+#registration-form {
+  width: 200px;
+  margin-top: 5px;
+  color: #c8c8c8;
+}
+
+#registration-form h2 {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#registration-form p {
+  font-size: 15px;
+}
+
+#registration-form input {
+  font-size: 16px;
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+}
+
+#registration-form button {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 10px 0px;
+  padding: 8px 0px;
+  width: 30%;
+  border: 0px;
+  border-radius: 5px;
+  background-color: #c8c8c8;
+}
+
+#registration-form button:hover {
+  color: rgb(193, 5, 5);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 5%;
+    width: 95%;
+  }
+  to {
+    margin-left: 0%;
+    width: 95%;
+  }
+}
+@keyframes alter_colors {
+  from {
+    color: rgb(228, 224, 225);
+  }
+  to {
+    color: rgb(164, 164, 30);
+  }
+}
+.header_bootstrap {
+  background-image: linear-gradient(to right, rgb(155, 2, 104), rgb(15, 55, 233));
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header_bootstrap ul {
+  display: flex;
+  justify-content: space-around;
+}
+.header_bootstrap ul li {
+  list-style-type: none;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.header_bootstrap ul a {
+  text-decoration: none;
+  color: rgb(237, 213, 213);
+  font-size: 20px;
+}
+.header_bootstrap ul a:hover {
+  color: rgb(66, 11, 11);
+  transition: 0.2s;
+  border-bottom: solid 1px rgb(237, 213, 213);
+}
+
+.footer_bootstrap {
+  background-color: rgb(39, 53, 53);
+}
+.footer_bootstrap h2 {
+  color: rgb(215, 200, 182);
+  text-align: center;
+  margin: 20px;
+}
+.footer_bootstrap p {
+  color: rgb(215, 200, 182);
+  text-align: center;
+}
+
+.fondo_transparente, #index_main_cover li p, #index_main_cover section, #index_main_playlist section, #index_main_playlist div, #index_main_event div {
+  background-image: linear-gradient(rgba(126, 7, 7, 0.192), rgb(160, 141, 141));
+  background-attachment: local;
+}
+
+h1 span {
+  color: #c10000;
+}
+
+#grid_container {
+  display: grid;
+  height: 100vh;
+  grid-template-areas: " index_header index_header " " index_main index_aside " " index_footer index_footer ";
+  grid-template-columns: 2.5fr 0.5fr;
+  grid-template-rows: 1.5fr 1fr 0.5fr;
+  grid-row-gap: 5px;
+  grid-column-gap: 5px;
+}
+
+#index_header {
+  grid-area: index_header;
+  height: 100%;
+  background-image: url("../img/vocalist_header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#index_up_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: none;
+}
+#index_up_header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#index_up_header nav ul li {
+  padding-right: 15px;
+  list-style-type: none;
+}
+#index_up_header nav ul li a {
+  text-decoration: none;
+  color: rgb(248, 221, 221);
+  font-size: 20px;
+}
+#index_up_header nav ul li a:hover {
+  color: rgb(66, 11, 11);
+  transition: 0.2s;
+}
+
+#index_header_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  flex-wrap: wrap;
+}
+#index_header_box p {
+  text-align: center;
+}
+#index_header_box section {
+  padding: 1.6em;
+  border-radius: 10px;
+  background-image: linear-gradient(rgba(114, 30, 91, 0.37), black);
+  background-attachment: fixed;
+}
+#index_header_box #index_header_box_p1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+  color: rgb(83, 84, 84);
+}
+#index_header_box #index_header_box_p1 strong {
+  color: rgb(248, 221, 221);
+}
+#index_header_box #index_header_box_p2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: rgb(200, 207, 124);
+}
+
+#index_main {
+  display: grid;
+  height: 100%;
+  grid-template-areas: " index_main_event index_main_playlist index_main_cover ";
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2px;
+}
+
+#index_aside {
+  grid-area: index_aside;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#index_aside section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#index_aside img {
+  height: 6rem;
+  width: 6rem;
+}
+
+#index_footer {
+  grid-area: index_footer;
+  background-color: rgb(39, 53, 53);
+}
+#index_footer h2 {
+  color: rgb(248, 221, 221);
+  text-align: center;
+  margin: 20px;
+}
+#index_footer p {
+  color: rgb(248, 221, 221);
+  text-align: center;
+}
+
+#index_main_event {
+  grid-area: index_main_event;
+  background-image: url("../img/estadio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: none;
+}
+#index_main_event a {
+  text-align: right;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  color: rgb(248, 221, 221);
+}
+#index_main_event a:hover {
+  color: rgb(83, 84, 84);
+  transition: 0.2s;
+}
+#index_main_event div {
+  width: 100%;
+}
+#index_main_event div h2 {
+  animation-duration: 5s;
+  animation-name: slidein;
+  animation-iteration-count: initial;
+}
+#index_main_event h3 {
+  margin-left: 10px;
+}
+#index_main_event h3 span {
+  font-style: italic;
+  color: rgb(99, 1, 1);
+}
+#index_main_event p {
+  font-size: large;
+  font-style: italic;
+  font-size: 20px;
+  color: rgb(248, 221, 221);
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  background-image: linear-gradient(rgba(114, 30, 91, 0.05), rgb(73, 73, 73));
+  background-attachment: fixed;
+}
+#index_main_event p span {
+  font-size: 30px;
+  animation-duration: 0.3s;
+  animation-name: alter_colors;
+  animation-iteration-count: infinite;
+}
+
+#index_main_playlist {
+  grid-area: index_main_playlist;
+  background-image: url("../img/listening.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: none;
+}
+#index_main_playlist div {
+  width: 100%;
+}
+#index_main_playlist div h2 {
+  animation-duration: 5s;
+  animation-name: slidein;
+  animation-iteration-count: initial;
+}
+#index_main_playlist h3 {
+  margin-left: 10px;
+}
+#index_main_playlist section {
+  margin-left: 10%;
+  margin-right: 15%;
+  padding-left: 25%;
+  border-radius: 10px;
+}
+#index_main_playlist section li {
+  color: rgb(61, 10, 10);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+#index_main_playlist a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: none;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  color: rgb(248, 221, 221);
+}
+#index_main_playlist a:hover {
+  color: rgb(83, 84, 84);
+  transition: 0.2s;
+}
+
+#index_main_cover {
+  grid-area: index_main_cover;
+  background-image: url("../img/vocal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#index_main_cover section p {
+  color: rgb(248, 221, 221);
+}
+#index_main_cover h2 {
+  animation-duration: 5s;
+  animation-name: slidein;
+  animation-iteration-count: initial;
+}
+#index_main_cover h3 {
+  color: rgb(248, 221, 221);
+  font-weight: lighter;
+  margin-left: 10px;
+}
+#index_main_cover img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+#index_main_cover li {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+#index_main_cover li p {
+  color: rgb(248, 221, 221);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-left: 5px;
+}
+#index_main_cover a {
+  display: flex;
+  justify-content: flex-end;
+  text-align: end;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  color: rgb(248, 221, 221);
+}
+#index_main_cover a:hover {
+  color: rgb(83, 84, 84);
+  transition: 0.2s;
+}
+
+/*SCSS para Ticket*/
+.put_backgroud_color {
+  background-color: #1b0212;
+}
+
+#ticket_main {
+  padding: 0px;
+}
+#ticket_main div {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40%;
+  margin-right: 30%;
+  margin-top: 15%;
+  margin-bottom: 30%;
+}
+#ticket_main div h2 {
+  color: rgb(248, 221, 221);
+  text-align: center;
+}
+#ticket_main div h2 span {
+  color: #d8f32c;
+}
+#ticket_main div button {
+  width: 200px;
+  color: #d8f32c;
+  border: solid 1px #d8f32c;
+}
+#ticket_main div p {
+  color: rgb(248, 221, 221);
+}
+#ticket_main img {
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+}
+
+.ticket_flex_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: none;
+  flex-wrap: wrap;
+}
+
+.ticketcard {
+  width: 18rem;
+}
+.ticketcard img {
+  width: 100%;
+  height: 250px;
+}
+
+#opening_act {
+  text-align: center;
+  border-bottom: solid 1px rgb(248, 221, 221);
+  margin-bottom: 5px;
+  background-color: #0a0107;
+}
+#opening_act h2 {
+  color: rgb(248, 221, 221);
+  margin-bottom: 2px;
+}
+
+#show_seats h3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: xx-large;
+  text-align: center;
+  color: rgb(248, 221, 221);
+}
+#show_seats h3 span {
+  color: #efef13;
+}
+#show_seats img {
+  margin-bottom: 30px;
+}
+
+#playlist_text h2 {
+  color: rgb(248, 221, 221);
+}
+#playlist_text h3 {
+  color: #efef13;
+}
+
+.playlist_table_color p {
+  color: rgb(248, 221, 221);
+}
+
+#profiel_aside {
+  height: calc(70% - 215px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: space-around;
+}
+#profiel_aside section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-around;
+  flex-wrap: wrap;
+}
+#profiel_aside section p {
+  color: rgb(248, 221, 221);
+}
+#profiel_aside section p span {
+  color: #efef13;
+}
+#profiel_aside img {
+  width: 100%;
+}
+
+#profiel_main_video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#profiel_main {
+  height: 100%;
+}
+#profiel_main h2, #profiel_main h3 {
+  color: rgb(248, 221, 221);
+}
+#profiel_main p {
+  color: rgb(111, 194, 22);
+}
+#profiel_main button {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 970px) {
+  #grid_container {
+    grid-template-areas: " index_header " " index_aside " " index_main " " index_footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+  }
+  #grid_container #ticket_main img {
+    height: 10vh;
+  }
+  #index_aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media (max-width: 680px) {
+  #index_main {
+    grid-template-areas: " index_main_event " " index_main_playlist " " index_main_cover ";
+    grid-template-columns: 1fr;
+    grid-row-gap: 3px;
+  }
+  #index_up_header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 576px) {
+  #profiel_aside div {
+    display: flex;
+    justify-content: center;
+  }
+  #profiel_aside div img {
+    height: 300px;
+    width: 200px;
+  }
+}
+@media (max-width: 400px) {
+  #index_aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #index_aside section {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #index_aside section img {
+    height: 4rem;
+    width: 4rem;
+  }
+  #index_main_event a {
+    text-align: left;
+    margin-right: 0px;
+    margin-left: 5px;
+  }
+  #index_main_playlist a {
+    justify-content: flex-start;
+    margin-right: 0px;
+    margin-left: 5px;
+  }
+  #index_main_cover a {
+    justify-content: flex-start;
+    margin-right: 0px;
+    margin-left: 5px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

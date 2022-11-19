@@ -1,0 +1,555 @@
+@import "_registerform";
+@import "_reset";
+@import "_keyframe";
+@import "_header_footer";
+@import "_variables";
+@import "_funciones";
+
+
+h1 span {
+    color: #c10000;
+}
+
+#grid_container {
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+        " index_header index_header "
+        " index_main index_aside "
+        " index_footer index_footer ";
+    grid-template-columns: 2.5fr 0.5fr;
+    grid-template-rows: 1.5fr 1fr 0.5fr;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+}
+
+#index_header {
+    grid-area: index_header;
+    height: 100%;
+    background-image: url("../img/vocalist_header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#index_up_header {
+    @include flex_box(row, space-around, none);
+
+    nav ul {
+        @include flex_box(row, space-between, none);
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+        li {
+            padding-right: 15px;
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                color: $blanco;
+                font-size: 20px;
+
+                &:hover {
+                    color: rgb(66, 11, 11);
+                    transition: 0.2s;
+                }
+            }
+        }
+    }
+}
+
+#index_header_box {
+    @include flex_box(row, space-around, center);
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-wrap: wrap;
+
+    p {
+        text-align: center;
+    }
+
+    section {
+        padding: 1.6em;
+        border-radius: 10px;
+        background-image: linear-gradient(rgba(114, 30, 91, 0.37), black);
+        background-attachment: fixed;
+    }
+
+    #index_header_box_p1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 18px;
+        color: $gris;
+
+        strong {
+            color: $blanco;
+        }
+    }
+
+    #index_header_box_p2 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        color: rgb(200, 207, 124);
+    }
+}
+
+#index_main {
+    display: grid;
+    height: 100%;
+    grid-template-areas:
+        " index_main_event index_main_playlist index_main_cover ";
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2px;
+}
+
+#index_aside {
+    grid-area: index_aside;
+    @include flex_box(column, space-around, center);
+    flex-wrap: wrap;
+
+    section {
+        @include flex_box(column, space-around, center);
+    }
+
+    img {
+        height: 6rem;
+        width: 6rem;
+    }
+}
+
+#index_footer {
+    grid-area: index_footer;
+    background-color: rgb(39, 53, 53);
+
+    h2 {
+        color: $blanco;
+        text-align: center;
+        margin: 20px;
+    }
+
+    p {
+        color: $blanco;
+        text-align: center;
+    }
+
+}
+
+//Grid de Tarjetas
+#index_main_event {
+    grid-area: index_main_event;
+    background-image: url("../img/estadio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include flex_box(column, space-between, none);
+
+    a {
+        text-align: right;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        text-decoration: none;
+        color: $blanco;
+
+        &:hover {
+            color: $gris;
+            transition: 0.2s;
+        }
+    }
+
+    div {
+        @extend .fondo_transparente;
+        width: 100%;
+
+        h2 {
+            animation-duration: 5s;
+            animation-name: slidein;
+            animation-iteration-count: initial;
+        }
+    }
+
+
+    h3 {
+        margin-left: 10px;
+
+        span {
+            font-style: italic;
+            color: rgb(99, 1, 1);
+        }
+    }
+
+    p {
+        font-size: large;
+        font-style: italic;
+        font-size: 20px;
+        color: $blanco;
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+        background-image: linear-gradient(rgba(114, 30, 91, 0.05), rgb(73, 73, 73));
+        background-attachment: fixed;
+
+        span {
+            font-size: 30px;
+            animation-duration: 0.3s;
+            animation-name: alter_colors;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+#index_main_playlist {
+    grid-area: index_main_playlist;
+    background-image: url("../img/listening.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    @include flex_box(column, space-between, none);
+
+    div {
+        @extend .fondo_transparente;
+        width: 100%;
+
+        h2 {
+            animation-duration: 5s;
+            animation-name: slidein;
+            animation-iteration-count: initial;
+        }
+    }
+
+    h3 {
+        margin-left: 10px;
+    }
+
+    section {
+        margin-left: 10%;
+        margin-right: 15%;
+        @extend .fondo_transparente;
+        padding-left: 25%;
+        border-radius: 10px;
+
+        li {
+            color: rgb(61, 10, 10);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    }
+
+    a {
+        @include flex_box(row, flex-end, none);
+        margin-bottom: 5px;
+        margin-right: 5px;
+        text-decoration: none;
+        color: $blanco;
+
+        &:hover {
+            color: $gris;
+            transition: 0.2s;
+        }
+    }
+
+}
+
+#index_main_cover {
+    grid-area: index_main_cover;
+    background-image: url("../img/vocal.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    section {
+        @extend .fondo_transparente;
+
+        p {
+            color: $blanco;
+        }
+    }
+
+    h2 {
+        animation-duration: 5s;
+        animation-name: slidein;
+        animation-iteration-count: initial;
+    }
+
+    h3 {
+        color: $blanco;
+        font-weight: lighter;
+        margin-left: 10px;
+    }
+
+    img {
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+    }
+
+    li {
+        @include flex_box(row, left, center);
+        margin-left: 10px;
+        margin-bottom: 5px;
+
+        p {
+            color: $blanco;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 5px;
+            @extend .fondo_transparente;
+        }
+    }
+
+    a {
+        display: flex;
+        justify-content: flex-end;
+        text-align: end;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        text-decoration: none;
+        color: $blanco;
+
+        &:hover {
+            color: rgb(83, 84, 84);
+            transition: 0.2s;
+        }
+    }
+}
+
+
+
+/*SCSS para Ticket*/
+
+.put_backgroud_color{
+    background-color: #1b0212;
+}
+
+#ticket_main {
+
+    padding: 0px;
+
+    div {
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 40%;
+        margin-right: 30%;
+        margin-top: 15%;
+        margin-bottom: 30%;
+
+        h2 {
+            color: $blanco;
+            text-align: center;
+            span{
+                color: $verde;
+            }
+        }
+
+        button {
+            width: 200px;
+            color: $verde;
+            border: solid 1px $verde;
+        }
+
+        p {
+            color: $blanco;
+        }
+    }
+
+    img {
+        position: relative;
+        z-index: -1;
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+.ticket_flex_row {
+    @include flex_box(row, space-around, none);
+    flex-wrap: wrap;
+}
+
+.ticketcard {
+    width: 18rem;
+
+    img {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+#opening_act{
+    text-align: center;
+    border-bottom: solid 1px $blanco;
+    margin-bottom: 5px;
+    background-color: #0a0107;
+    h2{
+        color: $blanco;
+        margin-bottom: 2px;
+    }
+}
+
+#show_seats{
+    
+    h3{
+       margin-top: 30px;
+       margin-bottom: 30px;
+       font-size: xx-large ;
+        text-align: center;
+        color: $blanco;;
+        span{
+          color: $amarillo;
+        }
+    }
+    img{
+        margin-bottom: 30px;
+    }
+}
+
+//Playlist page
+
+#playlist_text{
+    h2{
+        color: $blanco;
+    }
+    h3{
+        color: $amarillo;
+    }
+}
+
+.playlist_table_color{
+    p{  
+        color: $blanco;
+    }
+}
+
+//Profiel page
+
+#profiel_aside{
+    height: calc(70% - 215px);
+
+    @include flex_box(column, flex-start, space-around);
+    section{
+        @include flex_box(row, space-between, space-around);
+        flex-wrap: wrap;
+        p{
+            color: $blanco;
+            span{
+                color: $amarillo;
+            }
+        }
+    }
+    img{
+        width: 100%;
+    }
+}
+
+#profiel_main_video{
+    @include flex_box(column, center, center);
+}
+
+#profiel_main{
+    height: 100%;
+    h2,h3{
+        color: $blanco;
+    }
+    p{
+        color: rgb(111, 194, 22);
+    }
+    button{
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 970px) {
+    #grid_container {
+        grid-template-areas:
+            " index_header "
+            " index_aside "
+            " index_main "
+            " index_footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-row-gap: 5px;
+        grid-column-gap: 5px;
+
+        #ticket_main {
+            img {
+                height: 10vh;
+            }
+        }
+    
+    }
+
+    #index_aside {
+        @include flex_box(row, space-around, center);
+    }
+}
+
+@media (max-width: 680px) {
+    #index_main {
+        grid-template-areas:
+            " index_main_event "
+            " index_main_playlist "
+            " index_main_cover ";
+        grid-template-columns: 1fr;
+        grid-row-gap: 3px;
+    }
+
+    #index_up_header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    #profiel_aside{
+        div{
+            display: flex;
+            justify-content: center;
+            img{
+                height: 300px;
+                width: 200px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    #index_aside {
+        @include flex_box(column, space-around, center);
+
+        section {
+            margin-left: 10px;
+            margin-right: 10px;
+
+            img {
+                height: 4rem;
+                width: 4rem;
+            }
+        }
+    }
+
+    #index_main_event {
+        a {
+            text-align: left;
+            margin-right: 0px;
+            margin-left: 5px;
+        }
+    }
+
+    #index_main_playlist {
+        a {
+            justify-content: flex-start;
+            margin-right: 0px;
+            margin-left: 5px;
+        }
+    }
+
+    #index_main_cover {
+        a {
+            justify-content: flex-start;
+            margin-right: 0px;
+            margin-left: 5px;
+        }
+    }
+}
