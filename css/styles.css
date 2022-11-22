@@ -176,7 +176,7 @@ h1 span {
 #index_header_box #index_header_box_p1 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 18px;
-  color: rgb(83, 84, 84);
+  color: rgb(205, 203, 198);
 }
 #index_header_box #index_header_box_p1 strong {
   color: rgb(248, 221, 221);
@@ -390,18 +390,21 @@ h1 span {
 
 #ticket_main {
   padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #ticket_main div {
   position: absolute;
   z-index: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  margin-left: 40%;
-  margin-right: 30%;
-  margin-top: 15%;
-  margin-bottom: 30%;
+  align-items: center;
+  background-image: linear-gradient(rgba(114, 30, 91, 0.05), rgb(73, 73, 73));
+  background-attachment: fixed;
+  border-radius: 10px;
+  padding: 3px;
 }
 #ticket_main div h2 {
   color: rgb(248, 221, 221);
@@ -414,14 +417,16 @@ h1 span {
   width: 200px;
   color: #d8f32c;
   border: solid 1px #d8f32c;
+  font-weight: bold;
+  background-color: rgb(34, 33, 33);
 }
 #ticket_main div p {
-  color: rgb(248, 221, 221);
+  color: #d8f32c;
 }
 #ticket_main img {
   position: relative;
   z-index: -1;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 
@@ -435,6 +440,7 @@ h1 span {
 
 .ticketcard {
   width: 18rem;
+  margin-top: 5px;
 }
 .ticketcard img {
   width: 100%;
@@ -474,7 +480,16 @@ h1 span {
 }
 
 .playlist_table_color p {
+  color: aqua;
+}
+
+.playlist_table_color_disable p {
   color: rgb(248, 221, 221);
+}
+
+#playlist_card div img {
+  height: 70%;
+  width: 70%;
 }
 
 #profiel_aside {
@@ -511,7 +526,8 @@ h1 span {
 #profiel_main {
   height: 100%;
 }
-#profiel_main h2, #profiel_main h3 {
+#profiel_main h2,
+#profiel_main h3 {
   color: rgb(248, 221, 221);
 }
 #profiel_main p {
@@ -528,9 +544,6 @@ h1 span {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-row-gap: 5px;
     grid-column-gap: 5px;
-  }
-  #grid_container #ticket_main img {
-    height: 10vh;
   }
   #index_aside {
     display: flex;
@@ -561,6 +574,25 @@ h1 span {
   }
 }
 @media (max-width: 400px) {
+  #index_up_header nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #index_up_header nav ul li {
+    margin: 0px;
+    padding: 0px;
+  }
+  .header_bootstrap {
+    flex-direction: column;
+  }
+  .header_bootstrap nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
   #index_aside {
     display: flex;
     flex-direction: column;

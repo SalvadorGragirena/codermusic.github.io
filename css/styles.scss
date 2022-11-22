@@ -78,7 +78,7 @@ h1 span {
     #index_header_box_p1 {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: 18px;
-        color: $gris;
+        color: $gris_suave;
 
         strong {
             color: $blanco;
@@ -315,30 +315,31 @@ h1 span {
 
 /*SCSS para Ticket*/
 
-.put_backgroud_color{
+.put_backgroud_color {
     background-color: #1b0212;
 }
 
 #ticket_main {
 
     padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     div {
         position: absolute;
         z-index: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-left: 40%;
-        margin-right: 30%;
-        margin-top: 15%;
-        margin-bottom: 30%;
+        @include flex_box(column, center, center);
+        background-image: linear-gradient(rgba(114, 30, 91, 0.05), rgb(73, 73, 73));
+        background-attachment: fixed;
+        border-radius: 10px;
+        padding: 3px;
 
         h2 {
             color: $blanco;
             text-align: center;
-            span{
+
+            span {
                 color: $verde;
             }
         }
@@ -347,17 +348,19 @@ h1 span {
             width: 200px;
             color: $verde;
             border: solid 1px $verde;
+            font-weight: bold;
+            background-color: $negro_suave;
         }
 
         p {
-            color: $blanco;
+            color: $verde;
         }
     }
 
     img {
         position: relative;
         z-index: -1;
-        height: 100vh;
+        height: 100%;
         width: 100vw;
     }
 }
@@ -369,6 +372,7 @@ h1 span {
 
 .ticketcard {
     width: 18rem;
+    margin-top: 5px;
 
     img {
         width: 100%;
@@ -376,85 +380,113 @@ h1 span {
     }
 }
 
-#opening_act{
+#opening_act {
     text-align: center;
     border-bottom: solid 1px $blanco;
     margin-bottom: 5px;
     background-color: #0a0107;
-    h2{
+
+    h2 {
         color: $blanco;
         margin-bottom: 2px;
     }
 }
 
-#show_seats{
-    
-    h3{
-       margin-top: 30px;
-       margin-bottom: 30px;
-       font-size: xx-large ;
+#show_seats {
+
+    h3 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: xx-large;
         text-align: center;
-        color: $blanco;;
-        span{
-          color: $amarillo;
+        color: $blanco;
+        ;
+
+        span {
+            color: $amarillo;
         }
     }
-    img{
+
+    img {
         margin-bottom: 30px;
     }
 }
 
 //Playlist page
 
-#playlist_text{
-    h2{
+#playlist_text {
+    h2 {
         color: $blanco;
     }
-    h3{
+
+    h3 {
         color: $amarillo;
     }
 }
 
-.playlist_table_color{
-    p{  
+.playlist_table_color {
+    p {
+        color: $azul_verde;
+    }
+}
+.playlist_table_color_disable {
+    p {
         color: $blanco;
+    }
+}
+
+#playlist_card {
+
+    div {
+        img {
+            height: 70%;
+            width: 70%;
+        }
     }
 }
 
 //Profiel page
 
-#profiel_aside{
+#profiel_aside {
     height: calc(70% - 215px);
 
     @include flex_box(column, flex-start, space-around);
-    section{
+
+    section {
         @include flex_box(row, space-between, space-around);
         flex-wrap: wrap;
-        p{
+
+        p {
             color: $blanco;
-            span{
+
+            span {
                 color: $amarillo;
             }
         }
     }
-    img{
+
+    img {
         width: 100%;
     }
 }
 
-#profiel_main_video{
+#profiel_main_video {
     @include flex_box(column, center, center);
 }
 
-#profiel_main{
+#profiel_main {
     height: 100%;
-    h2,h3{
+
+    h2,
+    h3 {
         color: $blanco;
     }
-    p{
+
+    p {
         color: rgb(111, 194, 22);
     }
-    button{
+
+    button {
         margin-bottom: 10px;
     }
 }
@@ -471,14 +503,9 @@ h1 span {
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-row-gap: 5px;
         grid-column-gap: 5px;
-
-        #ticket_main {
-            img {
-                height: 10vh;
-            }
-        }
-    
     }
+
+
 
     #index_aside {
         @include flex_box(row, space-around, center);
@@ -502,11 +529,12 @@ h1 span {
 }
 
 @media (max-width: 576px) {
-    #profiel_aside{
-        div{
+    #profiel_aside {
+        div {
             display: flex;
             justify-content: center;
-            img{
+
+            img {
                 height: 300px;
                 width: 200px;
             }
@@ -515,6 +543,26 @@ h1 span {
 }
 
 @media (max-width: 400px) {
+    #index_up_header {
+        nav ul {
+            @include flex_box(column, space-around, center);
+
+            li {
+                margin: 0px;
+                padding: 0px;
+            }
+        }
+    }
+
+    .header_bootstrap {
+        flex-direction: column;
+
+        nav ul {
+            @include flex_box(column, space-around, center);
+        }
+    }
+
+
     #index_aside {
         @include flex_box(column, space-around, center);
 
