@@ -429,6 +429,7 @@ h1 span {
         color: $azul_verde;
     }
 }
+
 .playlist_table_color_disable {
     p {
         color: $blanco;
@@ -444,6 +445,13 @@ h1 span {
         }
     }
 }
+
+//cover page
+
+#cover_main {
+    position: 100vh;
+}
+
 
 //Profiel page
 
@@ -491,6 +499,15 @@ h1 span {
     }
 }
 
+#profiel_bottom {
+    background-color: #85105a;
+    color: $blanco;
+}
+
+#profiel_video{
+    margin-bottom: 10px;
+}
+
 
 @media (max-width: 970px) {
     #grid_container {
@@ -505,11 +522,10 @@ h1 span {
         grid-column-gap: 5px;
     }
 
-
-
     #index_aside {
         @include flex_box(row, space-around, center);
     }
+
 }
 
 @media (max-width: 680px) {

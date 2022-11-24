@@ -492,6 +492,10 @@ h1 span {
   width: 70%;
 }
 
+#cover_main {
+  position: 100vh;
+}
+
 #profiel_aside {
   height: calc(70% - 215px);
   display: flex;
@@ -534,6 +538,15 @@ h1 span {
   color: rgb(111, 194, 22);
 }
 #profiel_main button {
+  margin-bottom: 10px;
+}
+
+#profiel_bottom {
+  background-color: #85105a;
+  color: rgb(248, 221, 221);
+}
+
+#profiel_video {
   margin-bottom: 10px;
 }
 
