@@ -1,0 +1,88 @@
+#Header_Titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+h1{
+    color: aliceblue;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+    width: 100%;
+    border: solid 1px black;
+}
+
+.divisiones{
+    height: 65vh;
+    width: 30%;
+    border: solid 1px black;
+    margin: 10px;
+    background-color: blue;
+}
+
+.divisiones h2{
+    text-align: center;
+}
+
+.seccionar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.seccion_grande{
+    height: 50px;
+    width: 80%;
+    background-color: rgb(53, 71, 1);
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.seccion_chica{
+    height: 50px;
+    width: 20%;
+    background-color: rgb(143, 18, 18);
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.entrada1{
+    width: 80%;
+}
+.entrada2{
+    width: 80%;
+}
+.entrada3{
+    width: 80%;
+}
+
+.h3_button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.h3_button h3{
+    margin: 0px;
+    margin-left: 5px;
+    padding: 0px;
+    text-align: center;
+}
+
+footer{
+    background-color: rgb(0, 0, 0);
+    height: 100px;
+    width: 100%;
+}
+
+footer p{
+    color: aliceblue;
+}
